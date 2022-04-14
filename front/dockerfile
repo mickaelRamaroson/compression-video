@@ -1,0 +1,18 @@
+FROM node:14.17.2
+
+RUN mkdir -p /usr/src/app
+RUN mkdir -p /usr/src/app/frontend
+
+WORKDIR /usr/src/app/frontend
+
+COPY package*.json ./
+RUN npm update
+RUN npm install 
+
+COPY . .
+
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
+
+EXPOSE 3000
+# Command to run our app
+CMD [ "npm", "run","start" ]

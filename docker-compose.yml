@@ -1,0 +1,20 @@
+version: "3"
+services:
+  # Create frontend container
+  frontend:
+    build: ./front
+    ports:
+      - "3000:3000"
+    container_name: frontend-docker
+    restart: always
+    environment:
+      REACT_APP_API_URL: http://localhost:4000
+  # Create backend container
+  backend:
+    build: ./back
+    ports:
+      - "4000:4000"
+    environment:
+      PORT: 4000
+    container_name: backend-docker
+    restart: always
