@@ -1,0 +1,27 @@
+.homepage {
+  padding: 40px;
+  margin-top: 40px;
+  border-radius: 16px !important;
+  .form-upload-video {
+    .form-control {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 24px;
+      label {
+        font-size: 30px;
+      }
+    }
+  }
+
+  .compression-progression-container {
+    margin-top: 40px;
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+  }
+
+  .result-container {
+    font-size: large;
+    font-weight: 700;
+  }
+}

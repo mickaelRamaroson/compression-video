@@ -1,0 +1,49 @@
+.header-modal {
+  display: flex;
+  justify-content: space-between;
+  .btn-close {
+    cursor: pointer;
+    margin-right: -24px;
+    margin-top: -16px;
+    color: rgb(118, 118, 118);
+    &:hover {
+      color: red;
+    }
+  }
+}
+.player-container {
+  max-width: 600px;
+  video {
+    width: 100%;
+    height: auto;
+  }
+  .control-container {
+    .slider-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      & > span {
+        font-size: 12px;
+        &:first-child {
+          margin-right: 8px;
+        }
+        &:last-child {
+          margin-left: 8px;
+        }
+      }
+    }
+    .button-control-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .volume-container {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        .silder-volume {
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}
