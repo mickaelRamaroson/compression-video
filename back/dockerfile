@@ -12,6 +12,9 @@ RUN npm rebuild bcrypt --build-from-source
 
 COPY . .
 
+RUN npm run build
+
 ENV PORT=$PORT
 
-CMD [ "npm", "run", "dev"]
+
+CMD [ "npm", "run", "start"]
